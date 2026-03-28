@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>炬映音乐 - 让流行可以更艺术</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #FFF8F6; color: #2C2C2C; }
+    .container { max-width: 600px; margin: 0 auto; }
+    
+    /* Hero */
+    .hero { background: linear-gradient(135deg, #E8553A 0%, #C9442A 100%); color: white; padding: 60px 30px; text-align: center; }
+    .hero .logo { font-size: 36px; font-weight: bold; letter-spacing: 4px; margin-bottom: 16px; }
+    .hero .tagline { font-size: 18px; opacity: 0.95; margin-bottom: 8px; }
+    .hero .sub { font-size: 14px; opacity: 0.8; }
+    .hero .badge { display: inline-block; background: rgba(255,255,255,0.2); padding: 6px 16px; border-radius: 20px; font-size: 13px; margin-top: 20px; }
+    
+    /* Weibo follow button placeholder */
+    .weibo-section { background: white; padding: 20px 30px; border-bottom: 1px solid #f0f0f0; text-align: center; }
+    
+    /* Features */
+    .features { padding: 40px 30px; }
+    .features h2 { font-size: 22px; text-align: center; margin-bottom: 30px; color: #2C2C2C; }
+    .feature-item { display: flex; align-items: flex-start; margin-bottom: 28px; }
+    .feature-icon { width: 48px; height: 48px; background: #E8553A; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 22px; flex-shrink: 0; margin-right: 16px; }
+    .feature-text h3 { font-size: 16px; margin-bottom: 4px; color: #2C2C2C; }
+    .feature-text p { font-size: 13px; color: #888; line-height: 1.6; }
+    
+    /* Stats */
+    .stats { background: #2C2C2C; color: white; padding: 40px 30px; display: flex; justify-content: space-around; text-align: center; }
+    .stat-item .num { font-size: 32px; font-weight: bold; color: #E8553A; }
+    .stat-item .label { font-size: 12px; opacity: 0.7; margin-top: 4px; }
+    
+    /* Songs */
+    .songs { padding: 40px 30px; }
+    .songs h2 { font-size: 22px; text-align: center; margin-bottom: 24px; }
+    .song-card { background: white; border-radius: 12px; padding: 16px 20px; margin-bottom: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); display: flex; justify-content: space-between; align-items: center; }
+    .song-info h4 { font-size: 15px; margin-bottom: 4px; }
+    .song-info span { font-size: 12px; color: #888; }
+    .song-year { background: #E8553A; color: white; padding: 4px 12px; border-radius: 20px; font-size: 12px; }
+    
+    /* CTA */
+    .cta { background: linear-gradient(135deg, #E8553A 0%, #C9442A 100%); color: white; padding: 50px 30px; text-align: center; }
+    .cta h2 { font-size: 24px; margin-bottom: 10px; }
+    .cta p { font-size: 14px; opacity: 0.85; margin-bottom: 24px; }
+    .cta-btn { display: inline-block; background: white; color: #E8553A; padding: 14px 36px; border-radius: 30px; font-size: 16px; font-weight: bold; text-decoration: none; }
+    
+    /* Footer */
+    .footer { background: #1a1a1a; color: #666; padding: 30px; text-align: center; font-size: 12px; }
+    .footer a { color: #E8553A; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Hero -->
+    <div class="hero">
+      <div class="logo">炬映音乐</div>
+      <div class="tagline">让流行可以更艺术</div>
+      <div class="sub">跨粤时光 · 炬映传媒旗下音乐厂牌</div>
+      <div class="badge">📍 东莞 · 广东</div>
+    </div>
+    
+    <!-- Weibo Follow -->
+    <div class="weibo-section">
+      <div id="weibo-follow-container"></div>
+    </div>
+    
+    <!-- Features -->
+    <div class="features">
+      <h2>我们的服务</h2>
+      <div class="feature-item">
+        <div class="feature-icon">🎵</div>
+        <div class="feature-text">
+          <h3>音乐制作与发行</h3>
+          <p>从词曲创作到编曲制作，从录音混音到全平台发行，提供一站式音乐制作服务。</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">📣</div>
+        <div class="feature-text">
+          <h3>艺人宣传推广</h3>
+          <p>知乎、微博、小红书、抖音全平台覆盖，精准投放，让好音乐被更多人听见。</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🎬</div>
+        <div class="feature-text">
+          <h3>影视音乐定制</h3>
+          <p>为影视作品定制原创音乐，主题曲、片尾曲、插曲，打造专属声音记忆。</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🏢</div>
+        <div class="feature-text">
+          <h3>演艺经纪</h3>
+          <p>专业经纪团队，承接商业演出、品牌活动、演唱会策划执行全链路服务。</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Stats -->
+    <div class="stats">
+      <div class="stat-item"><div class="num">16</div><div class="label">年音乐深耕</div></div>
+      <div class="stat-item"><div class="num">12+</div><div class="label">原创作品</div></div>
+      <div class="stat-item"><div class="num">100+</div><div class="label">合作艺人</div></div>
+    </div>
+    
+    <!-- Songs -->
+    <div class="songs">
+      <h2>代表作品</h2>
+      <div class="song-card"><div class="song-info"><h4>《当爱的人离开自己》</h4><span>2025.12 · 珈华音乐</span></div><div class="song-year">2025</div></div>
+      <div class="song-card"><div class="song-info"><h4>《无畏》</h4><span>2025.11 · 珈华音乐</span></div><div class="song-year">2025</div></div>
+      <div class="song-card"><div class="song-info"><h4>《青春初长》</h4><span>2025.04 · 珈华音乐</span></div><div class="song-year">2025</div></div>
+      <div class="song-card"><div class="song-info"><h4>《深圳北》</h4><span>2024.07 · 一诺词曲</span></div><div class="song-year">2024</div></div>
+      <div class="song-card"><div class="song-info"><h4>《华丽登场》</h4><span>2017.05 · 炬映传媒</span></div><div class="song-year">2017</div></div>
+      <div class="song-card"><div class="song-info"><h4>《爱你只留下一道伤疤》</h4><span>2009 · 出道作品</span></div><div class="song-year">2009</div></div>
+    </div>
+    
+    <!-- CTA -->
+    <div class="cta">
+      <h2>让音乐创造价值</h2>
+      <p>无论是个人单曲、专辑制作，还是品牌音乐定制<br>炬映音乐，为你而来</p>
+      <a class="cta-btn" href="https://weibo.com/u/8245213018" target="_blank">关注微博</a>
+    </div>
+    
+    <!-- Footer -->
+    <div class="footer">
+      <p>© 2026 炬映传媒（广东）有限公司 · JuYing Media</p>
+      <p style="margin-top:8px;">联系：东莞 · 广东 | <a href="https://weibo.com/u/8245213018">@跨粤时光Music</a></p>
+    </div>
+  </div>
+  
+  <!-- Weibo SDK -->
+  <script>
+    window.__wb_conf = { uid: 8245213018 };
+  </script>
+  <script src="//js.v.tie. courtingcdn.com/sdk/jsfix/wb组件.js"></script>
+</body>
+</html>
