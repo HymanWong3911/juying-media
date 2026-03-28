@@ -6,19 +6,19 @@
   <title>炬映音乐 - 让流行可以更艺术</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #FFF8F6; color: #2C2C2C; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; background: #FFF8F6; color: #2C2C2C; }
     .container { max-width: 600px; margin: 0 auto; }
-    
+
     /* Hero */
     .hero { background: linear-gradient(135deg, #E8553A 0%, #C9442A 100%); color: white; padding: 60px 30px; text-align: center; }
     .hero .logo { font-size: 36px; font-weight: bold; letter-spacing: 4px; margin-bottom: 16px; }
     .hero .tagline { font-size: 18px; opacity: 0.95; margin-bottom: 8px; }
     .hero .sub { font-size: 14px; opacity: 0.8; }
     .hero .badge { display: inline-block; background: rgba(255,255,255,0.2); padding: 6px 16px; border-radius: 20px; font-size: 13px; margin-top: 20px; }
-    
+
     /* Weibo follow button placeholder */
     .weibo-section { background: white; padding: 20px 30px; border-bottom: 1px solid #f0f0f0; text-align: center; }
-    
+
     /* Features */
     .features { padding: 40px 30px; }
     .features h2 { font-size: 22px; text-align: center; margin-bottom: 30px; color: #2C2C2C; }
@@ -26,26 +26,40 @@
     .feature-icon { width: 48px; height: 48px; background: #E8553A; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-size: 22px; flex-shrink: 0; margin-right: 16px; }
     .feature-text h3 { font-size: 16px; margin-bottom: 4px; color: #2C2C2C; }
     .feature-text p { font-size: 13px; color: #888; line-height: 1.6; }
-    
+
     /* Stats */
     .stats { background: #2C2C2C; color: white; padding: 40px 30px; display: flex; justify-content: space-around; text-align: center; }
     .stat-item .num { font-size: 32px; font-weight: bold; color: #E8553A; }
     .stat-item .label { font-size: 12px; opacity: 0.7; margin-top: 4px; }
-    
+
     /* Songs */
     .songs { padding: 40px 30px; }
     .songs h2 { font-size: 22px; text-align: center; margin-bottom: 24px; }
-    .song-card { background: white; border-radius: 12px; padding: 16px 20px; margin-bottom: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); display: flex; justify-content: space-between; align-items: center; }
+
+    .year-label { font-size: 13px; color: #E8553A; font-weight: bold; margin: 28px 0 12px 0; padding-left: 4px; border-left: 3px solid #E8553A; }
+    .year-label:first-of-type { margin-top: 0; }
+
+    .song-card { background: white; border-radius: 12px; padding: 16px 20px; margin-bottom: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); display: flex; justify-content: space-between; align-items: center; cursor: pointer; transition: box-shadow 0.2s, transform 0.2s; }
+    .song-card:hover { box-shadow: 0 4px 16px rgba(232,85,58,0.15); transform: translateY(-1px); }
     .song-info h4 { font-size: 15px; margin-bottom: 4px; }
     .song-info span { font-size: 12px; color: #888; }
-    .song-year { background: #E8553A; color: white; padding: 4px 12px; border-radius: 20px; font-size: 12px; }
-    
+    .song-meta { display: flex; align-items: center; gap: 10px; }
+    .song-year { background: #E8553A; color: white; padding: 4px 12px; border-radius: 20px; font-size: 12px; white-space: nowrap; }
+    .song-tag { font-size: 11px; color: #E8553A; background: #FFF0ED; padding: 3px 8px; border-radius: 10px; }
+    .song-play { color: #E8553A; font-size: 13px; text-decoration: none; white-space: nowrap; }
+
+    /* Album / EP section */
+    .album { background: white; border-radius: 16px; padding: 24px; margin: 0 0 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+    .album h3 { font-size: 16px; margin-bottom: 6px; color: #2C2C2C; }
+    .album p { font-size: 12px; color: #888; margin-bottom: 4px; }
+    .album .album-cover { width: 100%; height: 160px; background: linear-gradient(135deg, #E8553A 0%, #C9442A 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 48px; margin-bottom: 14px; }
+
     /* CTA */
     .cta { background: linear-gradient(135deg, #E8553A 0%, #C9442A 100%); color: white; padding: 50px 30px; text-align: center; }
     .cta h2 { font-size: 24px; margin-bottom: 10px; }
     .cta p { font-size: 14px; opacity: 0.85; margin-bottom: 24px; }
     .cta-btn { display: inline-block; background: white; color: #E8553A; padding: 14px 36px; border-radius: 30px; font-size: 16px; font-weight: bold; text-decoration: none; }
-    
+
     /* Footer */
     .footer { background: #1a1a1a; color: #666; padding: 30px; text-align: center; font-size: 12px; }
     .footer a { color: #E8553A; text-decoration: none; }
@@ -53,6 +67,7 @@
 </head>
 <body>
   <div class="container">
+
     <!-- Hero -->
     <div class="hero">
       <div class="logo">炬映音乐</div>
@@ -60,12 +75,12 @@
       <div class="sub">跨粤时光 · 炬映传媒旗下音乐厂牌</div>
       <div class="badge">📍 东莞 · 广东</div>
     </div>
-    
+
     <!-- Weibo Follow -->
     <div class="weibo-section">
       <div id="weibo-follow-container"></div>
     </div>
-    
+
     <!-- Features -->
     <div class="features">
       <h2>我们的服务</h2>
@@ -98,39 +113,129 @@
         </div>
       </div>
     </div>
-    
+
     <!-- Stats -->
     <div class="stats">
-      <div class="stat-item"><div class="num">16</div><div class="label">年音乐深耕</div></div>
-      <div class="stat-item"><div class="num">12+</div><div class="label">原创作品</div></div>
+      <div class="stat-item"><div class="num">17</div><div class="label">年音乐深耕</div></div>
+      <div class="stat-item"><div class="num">14</div><div class="label">原创作品</div></div>
       <div class="stat-item"><div class="num">100+</div><div class="label">合作艺人</div></div>
     </div>
-    
+
+    <!-- Artist intro -->
+    <div style="background:white; margin:0 0 40px 0; padding: 30px;">
+      <div style="display:flex; align-items:center; gap:16px; margin-bottom:16px;">
+        <div style="width:60px; height:60px; background:linear-gradient(135deg,#E8553A,#C9442A); border-radius:50%; display:flex; align-items:center; justify-content:center; color:white; font-size:28px; font-weight:bold; flex-shrink:0;">鸣</div>
+        <div>
+          <div style="font-size:18px; font-weight:bold; color:#2C2C2C;">黄浩鸣</div>
+          <div style="font-size:12px; color:#888; margin-top:2px;">歌手 · 演员 · 音乐制作人 · 炬映传媒创始人</div>
+        </div>
+      </div>
+      <p style="font-size:13px; color:#555; line-height:1.8; text-align:justify;">
+        2009年以一首《爱你只留下一道伤疤》出道，深耕华语情歌领域十七年。代表作品涵盖《与你共勉》《当爱的人离开自己》等脍炙人口的金曲。2019年创办炬映传媒，将音乐事业版图从创作延伸至制作、发行、经纪全产业链。作为从广西贺州走出的音乐人，黄浩鸣始终坚持"让流行可以更艺术"的理念，用作品记录时代情感。
+      </p>
+    </div>
+
     <!-- Songs -->
     <div class="songs">
-      <h2>代表作品</h2>
-      <div class="song-card"><div class="song-info"><h4>《当爱的人离开自己》</h4><span>2025.12 · 珈华音乐</span></div><div class="song-year">2025</div></div>
-      <div class="song-card"><div class="song-info"><h4>《无畏》</h4><span>2025.11 · 珈华音乐</span></div><div class="song-year">2025</div></div>
-      <div class="song-card"><div class="song-info"><h4>《青春初长》</h4><span>2025.04 · 珈华音乐</span></div><div class="song-year">2025</div></div>
-      <div class="song-card"><div class="song-info"><h4>《深圳北》</h4><span>2024.07 · 一诺词曲</span></div><div class="song-year">2024</div></div>
-      <div class="song-card"><div class="song-info"><h4>《华丽登场》</h4><span>2017.05 · 炬映传媒</span></div><div class="song-year">2017</div></div>
-      <div class="song-card"><div class="song-info"><h4>《爱你只留下一道伤疤》</h4><span>2009 · 出道作品</span></div><div class="song-year">2009</div></div>
+      <h2>🎵 代表作品全览</h2>
+
+      <div class="year-label">2025</div>
+      <div class="song-card" onclick="location.href='https://y.music.163.com/program song/1339107619'">
+        <div class="song-info"><h4>《当爱的人离开自己》</h4><span>2025.12 · 珈华音乐集团</span></div>
+        <div class="song-meta">
+          <span class="song-tag">最新</span>
+          <span class="song-year">2025</span>
+        </div>
+      </div>
+      <div class="song-card">
+        <div class="song-info"><h4>《无畏》</h4><span>2025.11 · 字恩词 / 邱柄杰曲 / 珈华音乐</span></div>
+        <div class="song-meta"><span class="song-year">2025</span></div>
+      </div>
+      <div class="song-card">
+        <div class="song-info"><h4>《青春初长》</h4><span>2025.04 · 一诺词曲 / 珈华音乐</span></div>
+        <div class="song-meta"><span class="song-year">2025</span></div>
+      </div>
+
+      <div class="year-label">2024</div>
+      <div class="song-card">
+        <div class="song-info"><h4>《深圳北》</h4><span>2024.07 · 一诺词曲 · 记录城市记忆</span></div>
+        <div class="song-meta"><span class="song-year">2024</span></div>
+      </div>
+      <div class="song-card">
+        <div class="song-info"><h4>《追梦的人》</h4><span>2024.06 · 贺灵安词 / 邱柄杰曲</span></div>
+        <div class="song-meta"><span class="song-year">2024</span></div>
+      </div>
+
+      <div class="year-label">2023</div>
+      <div class="song-card">
+        <div class="song-info"><h4>《不知所措》</h4><span>2023.04 · 维谷词 / 杨旭曲</span></div>
+        <div class="song-meta"><span class="song-year">2023</span></div>
+      </div>
+
+      <div class="year-label">2021</div>
+      <div class="song-card">
+        <div class="song-info"><h4>《与你共勉》</h4><span>2021.10.23 · 宋普照词 / 子荣曲 · 罗伊·克里夫特《爱》灵感</span></div>
+        <div class="song-meta"><span class="song-year">2021</span></div>
+      </div>
+
+      <div class="year-label">2019</div>
+      <div class="song-card">
+        <div class="song-info"><h4>《因为爱》</h4><span>2019.01.10 · 宋普照词 / 子荣曲 / 陈宏琦编曲</span></div>
+        <div class="song-meta"><span class="song-year">2019</span></div>
+      </div>
+
+      <div class="year-label">2018</div>
+      <div class="song-card">
+        <div class="song-info"><h4>《势不可挡》</h4><span>2018.06 · 黄志文词 / 卢文韬曲</span></div>
+        <div class="song-meta"><span class="song-year">2018</span></div>
+      </div>
+      <div class="song-card">
+        <div class="song-info"><h4>《勇敢地飞》</h4><span>2018.01 · 黄志文词 / 卢文韬曲</span></div>
+        <div class="song-meta"><span class="song-year">2018</span></div>
+      </div>
+
+      <div class="year-label">2017</div>
+      <div class="song-card">
+        <div class="song-info"><h4>《华丽登场》</h4><span>2017 · 电影《世界杯》主题曲 · 自我宣告之作</span></div>
+        <div class="song-meta"><span class="song-year">2017</span></div>
+      </div>
+
+      <div class="year-label">2014</div>
+      <div class="song-card">
+        <div class="song-info"><h4>《披头士》</h4><span>2014 · 致敬披头士文化</span></div>
+        <div class="song-meta"><span class="song-year">2014</span></div>
+      </div>
+
+      <div class="year-label">2010</div>
+      <div class="song-card">
+        <div class="song-info"><h4>《谢谢你曾经爱过我》</h4><span>2010.12.24 · 冯建聪词 / 周旭风曲</span></div>
+        <div class="song-meta"><span class="song-year">2010</span></div>
+      </div>
+
+      <div class="year-label">2009</div>
+      <div class="song-card">
+        <div class="song-info"><h4>《爱你只留下一道伤疤》</h4><span>2009 · 出道代表作 · 清风/六哲/刘羽伦词</span></div>
+        <div class="song-meta">
+          <span class="song-tag">出道</span>
+          <span class="song-year">2009</span>
+        </div>
+      </div>
     </div>
-    
+
     <!-- CTA -->
     <div class="cta">
       <h2>让音乐创造价值</h2>
       <p>无论是个人单曲、专辑制作，还是品牌音乐定制<br>炬映音乐，为你而来</p>
       <a class="cta-btn" href="https://weibo.com/u/8245213018" target="_blank">关注微博</a>
     </div>
-    
+
     <!-- Footer -->
     <div class="footer">
       <p>© 2026 炬映传媒（广东）有限公司 · JuYing Media</p>
       <p style="margin-top:8px;">联系：东莞 · 广东 | <a href="https://weibo.com/u/8245213018">@跨粤时光Music</a></p>
     </div>
   </div>
-  
+
   <!-- Weibo SDK -->
   <script>
     window.__wb_conf = { uid: 8245213018 };
